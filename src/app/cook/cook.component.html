@@ -1,0 +1,15 @@
+<div>
+  <span>Add your raw material here:</span>
+  <span><input type="text" [(ngModel)]="material"></span>
+  <span><button class="btn btn-secondary" (click)="addMaterial()">Add</button></span>
+</div>
+<div>
+  <span>Your raw material:</span>
+  <!--<div>{{allMaterials}}</div>-->
+
+  <div  *ngFor="let mt of allMaterials">{{ mt }}</div>
+</div>
+
+<div><button class="btn btn-primary" (click)="checkFood()">Check Your Food</button></div>
+<div *ngIf="isFood">You can make: 11&22</div>
+<div *ngIf="tryAgain">Try again!</div>

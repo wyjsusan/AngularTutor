@@ -1,0 +1,21 @@
+<hr>
+<h4>This is a input Box with Two Way Data Binding</h4>
+<div>
+  <span>User Name: </span>
+  <input type="text" [(ngModel)]="userName">
+</div>
+
+<div>
+  <span>Password: </span>
+  <input type="password" placeholder="password">
+</div>
+
+<div *ngIf="isLogin" > You Loggedin as {{ userName }} </div>
+<button class="btn btn-primary" (click)="login()" style="margin-right: 10px"> Login </button>
+<button class="btn btn-light" (click)="logOut()"> Sign Out </button>
+
+<hr/>
+<h4>This is a test for ngFor</h4>
+<div *ngFor="let student of students">
+  <div><span>{{student.name}}    </span><span>{{student.major}}</span></div>
+</div>
